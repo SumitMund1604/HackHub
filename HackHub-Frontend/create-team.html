@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HackHub - Create Team</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="navbar">
+    <a href="index.html" class="logo">🚀 HackHub</a>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="hackathons.html">Hackathons</a>
+        <a href="find-teammates.html">Teams</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+<div class="container" style="max-width:600px;">
+    <a href="hackathon-detail.html" style="color:#3498db; text-decoration:none;">← Back to Hackathon</a>
+    <h2 class="page-title mt10">🏗️ Create a Team</h2>
+    <p style="color:#888; margin-bottom:15px;">Hackathon: <strong>FinTech Challenge 2026</strong></p>
+    <div class="card">
+        <form onsubmit="handleCreateTeam(event)">
+            <div class="form-group">
+                <label>Team Name *</label>
+                <input type="text" id="team-name" placeholder="e.g. CodeCrafters">
+            </div>
+            <div class="form-group">
+                <label>Team Description</label>
+                <textarea id="team-desc" placeholder="What is your team about? What are you building?"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Looking For</label>
+                <textarea id="team-looking" placeholder="e.g. Looking for a backend developer with Python experience and someone skilled in UI/UX design"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Open for Join Requests?</label>
+                <select id="team-open">
+                    <option value="yes">Yes - Anyone can request to join</option>
+                    <option value="no">No - Invite only</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" style="padding:12px 30px;">🚀 Create Team</button>
+        </form>
+    </div>
+</div>
+<div class="footer">&copy; 2026 HackHub | IWT Lab Project</div>
+<script src="script.js"></script>
+</body>
+</html>

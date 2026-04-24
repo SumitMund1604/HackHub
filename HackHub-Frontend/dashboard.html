@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HackHub - Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html" class="logo">🚀 HackHub</a>
+    <div class="nav-links">
+        <a href="hackathons.html">Hackathons</a>
+        <a href="find-teammates.html">Teams</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="inbox.html">Messages</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="dash-layout">
+
+        <div class="sidebar">
+            <a href="dashboard.html" class="active">📊 Dashboard</a>
+            <a href="profile.html">👤 Profile</a>
+            <a href="leaderboard.html">🏆 Leaderboard</a>
+            <a href="inbox.html">💬 Messages</a>
+            <a href="schedule-meeting.html">📅 Meetings</a>
+            <a href="hackathons.html">🎯 Hackathons</a>
+            <a href="find-teammates.html">👥 Teams</a>
+            <a href="admin.html">⚙️ Admin</a>
+        </div>
+
+        <div class="main-content">
+            <h2 class="page-title">Welcome back, Sumit!</h2>
+
+            <div class="stats-row">
+                <div class="stat-box">
+                    <div class="number">450</div>
+                    <div class="label">Points</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">#12</div>
+                    <div class="label">Rank</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">3</div>
+                    <div class="label">Teams</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">5</div>
+                    <div class="label">Submissions</div>
+                </div>
+            </div>
+
+            <h3 style="margin-bottom:10px;">🔔 Notifications</h3>
+            <div class="card">
+                <p>📢 <strong>FinTech Challenge 2026</strong> - Registration closing in 2 days!</p>
+            </div>
+            <div class="card">
+                <p>✅ Your idea "<strong>Smart Budget Tracker</strong>" scored <strong>7.8/10</strong> - Shortlisted!</p>
+            </div>
+            <div class="card">
+                <p>👥 <strong>Rahul Sharma</strong> wants to join your team "CodeCrafters"</p>
+            </div>
+
+            <h3 style="margin:15px 0 10px;">🎯 Active Hackathons</h3>
+            <div class="card">
+                <h3>🔥 FinTech Challenge 2026</h3>
+                <p><strong>Status:</strong> Idea Submitted (Score: 7.8/10)</p>
+                <p><strong>Team:</strong> CodeCrafters (3/4 members)</p>
+                <p><strong>Deadline:</strong> May 15, 2026</p>
+                <br>
+                <a href="hackathon-detail.html" class="btn btn-primary">View</a>
+                <a href="team-dashboard.html" class="btn btn-success">Team Dashboard</a>
+                <a href="results.html?id=1" class="btn btn-warning">AI Results</a>
+            </div>
+
+            <h3 style="margin:15px 0 10px;">🤝 Recommended Teammates</h3>
+            <div class="grid">
+                <div class="card text-center">
+                    <div class="avatar" style="margin:0 auto 8px; width:50px; height:50px; font-size:20px;">A</div>
+                    <strong>Ankit Patel</strong>
+                    <p>Match: 92%</p>
+                    <p><span class="badge badge-blue">Python</span> <span class="badge badge-green">Django</span></p>
+                </div>
+                <div class="card text-center">
+                    <div class="avatar" style="margin:0 auto 8px; width:50px; height:50px; font-size:20px; background:#27ae60;">P</div>
+                    <strong>Priya Singh</strong>
+                    <p>Match: 87%</p>
+                    <p><span class="badge badge-purple">ML/AI</span> <span class="badge badge-orange">TensorFlow</span></p>
+                </div>
+                <div class="card text-center">
+                    <div class="avatar" style="margin:0 auto 8px; width:50px; height:50px; font-size:20px; background:#e67e22;">R</div>
+                    <strong>Rohan Kumar</strong>
+                    <p>Match: 84%</p>
+                    <p><span class="badge badge-red">DevOps</span> <span class="badge badge-blue">Docker</span></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="footer">&copy; 2026 HackHub | IWT Lab Project</div>
+<script src="script.js"></script>
+</body>
+</html>

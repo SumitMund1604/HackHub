@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HackHub - Team Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="navbar">
+    <a href="index.html" class="logo">🚀 HackHub</a>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="hackathons.html">Hackathons</a>
+        <a href="find-teammates.html">Teams</a>
+        <a href="inbox.html">Messages</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+<div class="container">
+    <a href="dashboard.html" style="color:#3498db; text-decoration:none;">← Back to Dashboard</a>
+    <h2 class="page-title mt10">👥 Team: CodeCrafters</h2>
+    <p style="color:#888; margin-bottom:15px;">Hackathon: <strong>FinTech Challenge 2026</strong> | <span class="status status-open">ACTIVE</span></p>
+
+    <div class="stats-row">
+        <div class="stat-box"><div class="number">3/4</div><div class="label">Members</div></div>
+        <div class="stat-box"><div class="number">1</div><div class="label">Submissions</div></div>
+        <div class="stat-box"><div class="number">7.8</div><div class="label">AI Score</div></div>
+        <div class="stat-box"><div class="number">2</div><div class="label">Meetings</div></div>
+    </div>
+
+    <div class="card">
+        <h3>📋 Team Info</h3>
+        <p><strong>Description:</strong> Building a Smart Budget Tracker for college students to manage expenses and savings.</p>
+        <p><strong>Looking For:</strong> Backend developer with Python/Django experience</p>
+        <p><strong>Open for requests:</strong> Yes</p>
+    </div>
+
+    <div class="card">
+        <h3>👥 Members</h3>
+        <table>
+            <tr><th>Name</th><th>Role</th><th>Skills</th><th>Joined</th></tr>
+            <tr>
+                <td><strong>Sumit Mund</strong></td>
+                <td><span class="badge badge-blue">Leader</span></td>
+                <td>Java, React, PostgreSQL</td>
+                <td>Apr 5, 2026</td>
+            </tr>
+            <tr>
+                <td>Neha Gupta</td>
+                <td><span class="badge badge-green">Member</span></td>
+                <td>UI/UX, Figma, CSS</td>
+                <td>Apr 7, 2026</td>
+            </tr>
+            <tr>
+                <td>Amit Roy</td>
+                <td><span class="badge badge-green">Member</span></td>
+                <td>Node.js, MongoDB</td>
+                <td>Apr 8, 2026</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3>📝 Submissions</h3>
+        <table>
+            <tr><th>Title</th><th>Type</th><th>Score</th><th>Status</th><th>Action</th></tr>
+            <tr>
+                <td>Smart Budget Tracker</td>
+                <td>Idea</td>
+                <td>7.8/10</td>
+                <td><span class="status status-open">Shortlisted</span></td>
+                <td><a href="results.html?id=1" class="btn btn-primary">View</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3>📅 Upcoming Meetings</h3>
+        <table>
+            <tr><th>Title</th><th>Date</th><th>Time</th><th>Link</th></tr>
+            <tr>
+                <td>Sprint Planning</td>
+                <td>Apr 20, 2026</td>
+                <td>6:00 PM</td>
+                <td><a href="#" style="color:#3498db;">Join Meeting</a></td>
+            </tr>
+            <tr>
+                <td>Design Review</td>
+                <td>Apr 22, 2026</td>
+                <td>7:30 PM</td>
+                <td><a href="#" style="color:#3498db;">Join Meeting</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="margin-top:15px;">
+        <a href="find-teammates.html" class="btn btn-primary">🔍 Find More Members</a>
+        <a href="submit-idea.html" class="btn btn-success" style="margin-left:8px;">📝 New Submission</a>
+        <a href="schedule-meeting.html" class="btn btn-warning" style="margin-left:8px;">📅 Schedule Meeting</a>
+    </div>
+</div>
+<div class="footer">&copy; 2026 HackHub | IWT Lab Project</div>
+<script src="script.js"></script>
+</body>
+</html>

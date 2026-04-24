@@ -1,0 +1,192 @@
+{
+  "hackathon_themes": {
+    "fintech": "FinTech Innovation - Build solutions that revolutionize personal finance, banking, payments, investment, or financial inclusion using technology.",
+    "healthtech": "HealthTech Solutions - Create technology-driven solutions for healthcare, wellness, telemedicine, patient management, or medical data analysis.",
+    "edtech": "EdTech Revolution - Design innovative tools for learning, teaching, skill development, assessment, or educational accessibility.",
+    "sustainability": "Sustainable Future - Develop solutions addressing climate change, renewable energy, waste management, sustainable agriculture, or eco-friendly living."
+  },
+  "past_submissions": [
+    {
+      "id": 1,
+      "title": "SmartBudget - AI Personal Finance Tracker",
+      "description": "An intelligent personal finance management app that uses machine learning to categorize expenses, predict future spending patterns, and provide personalized saving suggestions. The app connects to bank APIs to automatically import transactions and uses NLP to understand spending habits.",
+      "problem": "College students and young professionals struggle to track their expenses effectively. Manual tracking is tedious and most existing apps lack personalized insights. 65% of millennials don't have a budget.",
+      "solution": "SmartBudget uses a combination of rule-based categorization and a trained classifier to auto-categorize transactions. It employs time-series analysis to predict future expenses and generates weekly insights using template-based NLP.",
+      "tech_stack": "Python, Flask, React Native, PostgreSQL, scikit-learn, Plaid API",
+      "theme": "fintech"
+    },
+    {
+      "id": 2,
+      "title": "PeerLend - P2P Micro-Lending Platform",
+      "description": "A peer-to-peer micro-lending platform designed for college students. Students can lend and borrow small amounts with transparent terms and social accountability. Uses credit scoring based on academic performance and peer reviews.",
+      "problem": "Students often need small loans (₹500-₹5000) for immediate needs but don't have access to formal credit. Traditional lending platforms have high minimum amounts and complex KYC requirements.",
+      "solution": "A mobile-first web app where students can create lending/borrowing requests. An alternative credit scoring system uses factors like academic standing, peer endorsements, and repayment history to assess creditworthiness.",
+      "tech_stack": "Node.js, Express, MongoDB, React, Razorpay API",
+      "theme": "fintech"
+    },
+    {
+      "id": 3,
+      "title": "MedTrack - Patient Health Monitoring System",
+      "description": "A comprehensive patient health monitoring dashboard that integrates with wearable devices to track vital signs in real-time. Alerts healthcare providers when readings go beyond normal thresholds. Includes a telemedicine module for virtual consultations.",
+      "problem": "Chronic disease patients need continuous monitoring but frequent hospital visits are impractical. Current monitoring solutions are fragmented - vital data from different sources isn't consolidated.",
+      "solution": "MedTrack provides a unified dashboard aggregating data from wearables (Fitbit, Apple Watch) via their APIs. A rule-based alert system monitors thresholds and notifies doctors. The telemedicine module uses WebRTC for video consultations.",
+      "tech_stack": "React, Node.js, PostgreSQL, WebRTC, Fitbit API, Firebase Cloud Messaging",
+      "theme": "healthtech"
+    },
+    {
+      "id": 4,
+      "title": "MentalWell - Student Mental Health Support",
+      "description": "An anonymous mental health support platform for college students featuring mood tracking, guided exercises, peer support groups, and crisis detection. Uses sentiment analysis on journal entries to identify at-risk students.",
+      "problem": "Mental health issues among college students are rising dramatically. 40% of students don't seek help due to stigma. College counseling centers are overwhelmed with long wait times.",
+      "solution": "MentalWell provides anonymous mood tracking with daily check-ins. NLP-based sentiment analysis on journal entries flags concerning patterns. Peer support circles are moderated. High-risk alerts are sent to counselors with student consent.",
+      "tech_stack": "Django, PostgreSQL, React, NLTK, Chart.js",
+      "theme": "healthtech"
+    },
+    {
+      "id": 5,
+      "title": "SkillForge - Adaptive Learning Platform",
+      "description": "An adaptive learning platform that personalizes the learning path based on student performance. Uses spaced repetition algorithms and knowledge graphs to optimize retention. Supports multiple content formats including video, text, and interactive quizzes.",
+      "problem": "One-size-fits-all online courses have completion rates below 15%. Students waste time on concepts they already know or get stuck on prerequisite topics they haven't mastered.",
+      "solution": "SkillForge builds a knowledge graph for each subject domain. As students complete assessments, the system identifies gaps and adapts the learning path. Spaced repetition scheduling ensures optimal review timing.",
+      "tech_stack": "Python, FastAPI, Neo4j, React, Redis",
+      "theme": "edtech"
+    },
+    {
+      "id": 6,
+      "title": "CodeBuddy - AI-Powered Coding Tutor",
+      "description": "An intelligent coding tutor that provides real-time feedback on code, suggests improvements, and generates practice problems based on skill level. Supports Python, Java, and JavaScript with syntax highlighting and in-browser code execution.",
+      "problem": "Learning to code is challenging without personalized feedback. MOOCs provide content but not interactive mentoring. Students often get stuck without knowing where they went wrong.",
+      "solution": "CodeBuddy uses AST (Abstract Syntax Tree) analysis to detect common coding patterns and anti-patterns. It provides instant style and logic suggestions. The problem generator creates exercises matching the student's current skill level using difficulty classification.",
+      "tech_stack": "Python, Flask, Docker, React, Monaco Editor, PostgreSQL",
+      "theme": "edtech"
+    },
+    {
+      "id": 7,
+      "title": "EcoTrack - Carbon Footprint Calculator",
+      "description": "A mobile app that tracks personal carbon footprint by analyzing transportation, food, energy usage, and shopping habits. Provides gamified challenges and community leaderboards to encourage sustainable living. Partners with local eco-friendly businesses for rewards.",
+      "problem": "Most people are unaware of their daily environmental impact. Existing carbon calculators are one-time tools that don't track ongoing habits or provide actionable suggestions.",
+      "solution": "EcoTrack uses location data and purchase history to automatically estimate carbon emissions. Machine learning models trained on emission databases convert activities to CO2 equivalents. Weekly challenges and social features drive engagement.",
+      "tech_stack": "React Native, Firebase, Python, TensorFlow Lite, Google Maps API",
+      "theme": "sustainability"
+    },
+    {
+      "id": 8,
+      "title": "WasteWise - Smart Waste Segregation System",
+      "description": "An IoT-enabled waste management system that uses image recognition to classify waste at the point of disposal. The smart bin guides users on correct segregation and provides analytics to waste management authorities on composition trends.",
+      "problem": "Improper waste segregation leads to contamination of recyclables, increasing landfill burden. Manual sorting is expensive and inconsistent. Most people don't know how to correctly classify waste items.",
+      "solution": "A camera module on bins captures images of disposed items. A MobileNet-based classifier identifies waste type (organic, recyclable, hazardous). LED indicators guide users. Data is sent to a cloud dashboard for municipal authorities.",
+      "tech_stack": "Raspberry Pi, TensorFlow Lite, Python, React, AWS IoT, PostgreSQL",
+      "theme": "sustainability"
+    },
+    {
+      "id": 9,
+      "title": "CryptoLearn - Blockchain Education Platform",
+      "description": "An interactive platform for learning blockchain technology with sandbox environments for deploying smart contracts. Includes simulated cryptocurrency trading and NFT creation modules.",
+      "problem": "Blockchain technology is complex and existing resources are either too theoretical or require real cryptocurrency for practice. Students need a risk-free environment to experiment.",
+      "solution": "CryptoLearn provides a sandboxed Ethereum testnet where students deploy Solidity smart contracts. A simulated exchange with play money teaches trading concepts. Interactive tutorials cover blockchain fundamentals through hands-on projects.",
+      "tech_stack": "React, Solidity, Hardhat, Node.js, PostgreSQL, Web3.js",
+      "theme": "edtech"
+    },
+    {
+      "id": 10,
+      "title": "FarmConnect - Direct Farm-to-Consumer Marketplace",
+      "description": "A platform connecting farmers directly with consumers, eliminating middlemen. Features crop listing, price comparison, subscription boxes for regular produce delivery, and weather-based yield prediction.",
+      "problem": "Farmers receive only 15-25% of the final retail price due to multiple intermediaries. Consumers pay premium prices for produce that isn't always fresh. Lack of market access information leads to crop wastage.",
+      "solution": "FarmConnect provides a two-sided marketplace with geolocation-based matching. Farmers list available produce with photos and pricing. Consumers browse local farms and subscribe for weekly deliveries. Weather API integration helps predict yield for better planning.",
+      "tech_stack": "Django, PostgreSQL, React, Google Maps API, OpenWeather API, Razorpay",
+      "theme": "sustainability"
+    },
+    {
+      "id": 11,
+      "title": "QuizMaster - Real-time Classroom Quiz Platform",
+      "description": "A real-time quiz platform where teachers create interactive quizzes and students answer simultaneously on their devices. Features live leaderboards, answer analytics, and exportable reports for grading.",
+      "problem": "Traditional classroom assessments are slow and don't provide immediate feedback. Teachers spend hours grading quizzes manually. Student engagement during lectures is declining.",
+      "solution": "Teachers create quizzes with multiple question types. Students join via a room code on their phones. WebSocket-based real-time sync shows live results. Analytics dashboard tracks class performance trends over time.",
+      "tech_stack": "Next.js, Socket.io, MongoDB, Redis, Chart.js",
+      "theme": "edtech"
+    },
+    {
+      "id": 12,
+      "title": "InsureEase - Simplified Insurance Comparison",
+      "description": "A platform that simplifies insurance comparison and purchase for young adults. Uses NLP to parse complex policy documents and present them in easy-to-understand summaries with side-by-side feature comparison.",
+      "problem": "Insurance policies are written in complex legal jargon. Young adults find it overwhelming to compare plans. Existing comparison sites push sponsored plans rather than best matches.",
+      "solution": "InsureEase scrapes insurance policy PDFs and uses NLP techniques (named entity recognition, summarization) to extract key features like coverage, deductibles, and exclusions. A comparison engine scores plans against user preferences.",
+      "tech_stack": "Python, FastAPI, spaCy, React, PostgreSQL, PDFMiner",
+      "theme": "fintech"
+    },
+    {
+      "id": 13,
+      "title": "FitCoach - AI Workout Assistant",
+      "description": "A fitness app that uses pose estimation to provide real-time form feedback during workouts. Tracks reps, suggests corrections, and builds personalized workout plans based on fitness goals and equipment availability.",
+      "problem": "Most people perform exercises with incorrect form, leading to injuries and reduced effectiveness. Personal trainers are expensive and not always accessible.",
+      "solution": "FitCoach uses MediaPipe pose estimation to track body landmarks during exercises. Real-time comparison against reference poses detects form errors. A recommendation engine builds weekly plans adapting to user progress.",
+      "tech_stack": "React Native, MediaPipe, TensorFlow.js, Firebase, Node.js",
+      "theme": "healthtech"
+    },
+    {
+      "id": 14,
+      "title": "RidePool - Campus Carpooling Network",
+      "description": "A carpooling platform specifically for college campus commuters. Matches riders and drivers based on routes, schedules, and preferences. Includes split cost calculation, ride rating system, and carbon savings tracker.",
+      "problem": "College students spend significant money on daily commuting. Many drive alone despite similar routes. Traffic congestion around campuses is worsening, and parking is limited.",
+      "solution": "RidePool uses route matching algorithms to find compatible riders and drivers. Schedule-based matching considers class timetables. A trust system built on university email verification and ride ratings ensures safety. Carbon savings are gamified with monthly campus leaderboards.",
+      "tech_stack": "React, Node.js, PostgreSQL, Google Maps API, Socket.io",
+      "theme": "sustainability"
+    },
+    {
+      "id": 15,
+      "title": "DocAssist - AI Clinical Decision Support",
+      "description": "A clinical decision support system that helps junior doctors by suggesting differential diagnoses based on symptoms, lab results, and patient history. Includes drug interaction checker and treatment protocol references.",
+      "problem": "Diagnostic errors account for 10% of patient deaths. Junior doctors face information overload and time pressure. Current reference tools are not integrated into the clinical workflow.",
+      "solution": "DocAssist uses a symptom-diagnosis knowledge base built from medical literature. A Bayesian inference engine suggests ranked differential diagnoses given input symptoms. Drug interaction checking using a curated database prevents prescription errors.",
+      "tech_stack": "Python, Django, PostgreSQL, React, spaCy, Pandas",
+      "theme": "healthtech"
+    },
+    {
+      "id": 16,
+      "title": "BudgetBee - Group Expense Splitter",
+      "description": "A group expense management app for college students living together. Tracks shared expenses, calculates optimal settlements, and sends payment reminders. Integrates with UPI for instant settlements.",
+      "problem": "Shared living expenses create friction among roommates. Tracking who owes whom is error-prone with spreadsheets. Settling debts involves multiple transactions when it could be optimized.",
+      "solution": "BudgetBee records expenses and uses a minimum cash flow algorithm to optimize settlements. Push notifications remind members of pending payments. UPI deep links enable one-tap payments.",
+      "tech_stack": "Flutter, Firebase, Node.js, UPI Intent API",
+      "theme": "fintech"
+    },
+    {
+      "id": 17,
+      "title": "LabSafe - Chemical Safety Assistant",
+      "description": "A mobile app for chemistry lab safety that identifies chemicals from photos, shows safety data sheets, and warns about incompatible chemical combinations. Includes emergency protocol guides.",
+      "problem": "Chemistry lab accidents occur due to improper chemical handling. Safety data sheets are lengthy and not easily accessible during lab work. Students may unknowingly create dangerous chemical combinations.",
+      "solution": "LabSafe uses image recognition to identify chemical labels. A chemical compatibility database warns about dangerous combinations. Quick-access emergency procedures are available offline. QR codes on lab bottles link to detailed safety information.",
+      "tech_stack": "React Native, TensorFlow Lite, SQLite, Python, Firebase",
+      "theme": "healthtech"
+    },
+    {
+      "id": 18,
+      "title": "GreenGrid - Renewable Energy Monitoring Dashboard",
+      "description": "A monitoring dashboard for small-scale renewable energy installations (solar panels, wind turbines) that tracks energy production, consumption, and grid feed-in. Provides predictive maintenance alerts based on performance patterns.",
+      "problem": "Small-scale renewable energy users lack affordable monitoring tools. They can't optimize energy usage or detect panel degradation early. Available solutions target large commercial installations.",
+      "solution": "GreenGrid connects to inverter APIs and smart meters to collect real-time data. Time-series analysis detects performance degradation. Weather-correlated production forecasts help users plan energy usage. Cost savings are calculated and displayed.",
+      "tech_stack": "Python, InfluxDB, Grafana, React, Raspberry Pi, MQTT",
+      "theme": "sustainability"
+    },
+    {
+      "id": 19,
+      "title": "StudyMatch - Study Group Formation Tool",
+      "description": "A platform that forms optimal study groups based on course enrollment, skill levels, availability, and learning styles. Includes shared note-taking, session scheduling, and performance tracking.",
+      "problem": "Students struggle to find compatible study partners. Random groups often have skill mismatches. Coordinating schedules across group members is time-consuming.",
+      "solution": "StudyMatch uses a matching algorithm considering academic course overlap, self-reported proficiency levels, and schedule availability. Groups are formed to balance skill levels. Built-in scheduling and shared workspace reduce coordination overhead.",
+      "tech_stack": "Django, PostgreSQL, React, FullCalendar.js, Socket.io",
+      "theme": "edtech"
+    },
+    {
+      "id": 20,
+      "title": "PaySplit - Subscription Cost Sharing Platform",
+      "description": "A platform for sharing subscription costs (Netflix, Spotify, etc.) among trusted groups. Handles billing splits, access management, and automated payment collection with reminders.",
+      "problem": "Individual subscription costs add up significantly for students. Family/group plans exist but managing splits informally leads to payment disputes and freeloading.",
+      "solution": "PaySplit creates verified groups for subscription sharing. Automated monthly billing splits charges equally. Integration with payment gateways collects shares automatically. Access revocation for non-payers is enforced through account management.",
+      "tech_stack": "Next.js, Stripe API, PostgreSQL, Redis, Node.js",
+      "theme": "fintech"
+    }
+  ]
+}
+
+

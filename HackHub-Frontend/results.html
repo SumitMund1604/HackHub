@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HackHub - AI Evaluation Results</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    .status-shortlisted { background: var(--secondary); color: white; }
+    .status-review { background: var(--warning); color: white; }
+    .status-rejected { background: var(--danger); color: white; }
+</style>
+</head>
+<body>
+<div class="navbar">
+    <a href="index.html" class="logo">🚀 HackHub</a>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="hackathons.html">Hackathons</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+<div class="container" style="max-width:700px;">
+    <a href="hackathons.html" style="color:var(--primary); text-decoration:none; font-weight:500;">&larr; Back to Hackathons</a>
+    <h2 class="page-title mt-4">🤖 AI Evaluation Results</h2>
+    <p style="color:var(--text-muted); margin-bottom:24px;">Project Idea: <strong id="res-title">Loading...</strong></p>
+
+    <div class="card text-center" style="padding: 32px;">
+        <h3 style="color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; font-size:14px;">Overall Score</h3>
+        <div id="res-overall" style="font-size:56px; font-weight:700; color:var(--text-main); margin:8px 0; letter-spacing:-2px;">- / 10</div>
+        <div id="res-status" class="status status-review" style="margin-bottom: 20px;">EVALUATING</div>
+        <div style="margin-top:10px;">
+            <div style="background:#E5E7EB; border-radius:8px; height:8px; width:100%; margin:0 auto; overflow:hidden;">
+                <div id="res-bar-overall" style="background:var(--primary); height:100%; border-radius:8px; width:0%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📊 Score Breakdown</h3>
+        <table style="margin-top: 16px;">
+            <tr><th>Criteria</th><th style="width:60px;">Score</th><th>Visual</th></tr>
+            <tr>
+                <td>Innovation</td>
+                <td><strong id="res-inn">0.0</strong></td>
+                <td><div class="score-bar"><div id="bar-inn" class="fill" style="width:0%; background:var(--primary);"></div></div></td>
+            </tr>
+            <tr>
+                <td>Feasibility</td>
+                <td><strong id="res-feas">0.0</strong></td>
+                <td><div class="score-bar"><div id="bar-feas" class="fill" style="width:0%; background:var(--warning);"></div></div></td>
+            </tr>
+            <tr>
+                <td>Relevance</td>
+                <td><strong id="res-rel">0.0</strong></td>
+                <td><div class="score-bar"><div id="bar-rel" class="fill" style="width:0%; background:var(--secondary);"></div></div></td>
+            </tr>
+            <tr>
+                <td>Clarity</td>
+                <td><strong id="res-clar">0.0</strong></td>
+                <td><div class="score-bar"><div id="bar-clar" class="fill" style="width:0%; background:#3B82F6;"></div></div></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3>💬 AI Feedback</h3>
+        <div id="res-feedback" style="background:#F9FAFB; border-left:4px solid var(--primary); padding:16px; border-radius:4px; font-style:italic; color:var(--text-muted); margin-top: 12px; line-height: 1.6;">
+            Loading feedback...
+        </div>
+    </div>
+
+    <div style="margin-top:24px; display:flex; gap:12px;">
+        <a href="submit-idea.html" class="btn btn-warning">✏️ Resubmit Improved Idea</a>
+        <a href="find-teammates.html" class="btn btn-success">👥 Find Teammates</a>
+        <a href="create-team.html" class="btn btn-primary">🏗️ Create Team</a>
+    </div>
+</div>
+<div class="footer" style="margin-top: 60px;">&copy; 2026 HackHub | IWT Lab Project</div>
+<script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (!checkAuth()) return;
+        const params = new URLSearchParams(window.location.search);
+        const subId = params.get('id');
+        if (!subId) {
+            showAlert('No submission ID provided.', 'danger');
+            return;
+        }
+
+        fetch(API + '/submissions/' + subId)
+        .then(r => r.json())
+        .then(data => {
+            if (data.success && data.submission) {
+                const sub = data.submission;
+                document.getElementById('res-title').textContent = sub.title;
+                
+                const overall = sub.overall_score || 0;
+                document.getElementById('res-overall').textContent = parseFloat(overall).toFixed(1) + ' / 10';
+                document.getElementById('res-bar-overall').style.width = (overall * 10) + '%';
+                
+                let statusEl = document.getElementById('res-status');
+                if (overall >= 7.0) {
+                    statusEl.textContent = '✅ SHORTLISTED';
+                    statusEl.className = 'status status-shortlisted';
+                    document.getElementById('res-bar-overall').style.background = 'var(--secondary)';
+                } else if (overall >= 5.0) {
+                    statusEl.textContent = '🔍 UNDER REVIEW';
+                    statusEl.className = 'status status-review';
+                    document.getElementById('res-bar-overall').style.background = 'var(--warning)';
+                } else {
+                    statusEl.textContent = '❌ REJECTED';
+                    statusEl.className = 'status status-rejected';
+                    document.getElementById('res-bar-overall').style.background = 'var(--danger)';
+                }
+
+                document.getElementById('res-inn').textContent = parseFloat(sub.innovation_score || 0).toFixed(1);
+                document.getElementById('bar-inn').style.width = (sub.innovation_score * 10) + '%';
+                
+                document.getElementById('res-feas').textContent = parseFloat(sub.feasibility_score || 0).toFixed(1);
+                document.getElementById('bar-feas').style.width = (sub.feasibility_score * 10) + '%';
+                
+                document.getElementById('res-rel').textContent = parseFloat(sub.relevance_score || 0).toFixed(1);
+                document.getElementById('bar-rel').style.width = (sub.relevance_score * 10) + '%';
+                
+                document.getElementById('res-clar').textContent = parseFloat(sub.clarity_score || 0).toFixed(1);
+                document.getElementById('bar-clar').style.width = (sub.clarity_score * 10) + '%';
+                
+                document.getElementById('res-feedback').textContent = sub.ai_feedback || "No feedback available.";
+            } else {
+                showAlert('Failed to load results.', 'danger');
+            }
+        })
+        .catch(err => {
+            showAlert('Error fetching evaluation: ' + err.message, 'danger');
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HackHub - Submit Idea</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="navbar">
+    <a href="index.html" class="logo">🚀 HackHub</a>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="hackathons.html">Hackathons</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+<div class="container" style="max-width:700px;">
+    <a href="hackathon-detail.html" style="color:#3498db; text-decoration:none;">← Back to Hackathon</a>
+    <h2 class="page-title mt10">📝 Submit Your Idea</h2>
+    <p style="color:#888; margin-bottom:15px;">Your idea will be evaluated by our AI system.</p>
+    <div class="card">
+        <form onsubmit="handleIdeaSubmit(event)">
+            <div class="form-group">
+                <label>Idea Title *</label>
+                <input type="text" id="idea-title" placeholder="e.g. Smart Budget Tracker for Students">
+            </div>
+            <div class="form-group">
+                <label>Idea Description *</label>
+                <textarea id="idea-desc" placeholder="Describe your idea in detail..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Problem Statement</label>
+                <textarea id="idea-problem" placeholder="What problem does your idea solve?"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Proposed Solution</label>
+                <textarea id="idea-solution" placeholder="How does your solution work? Describe the approach..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Tech Stack</label>
+                <input type="text" id="idea-tech" placeholder="e.g. React, Node.js, PostgreSQL, Python">
+            </div>
+            <div class="form-group">
+                <label>GitHub Repository URL</label>
+                <input type="url" id="idea-repo" placeholder="https://github.com/username/repo">
+            </div>
+            <div class="form-group">
+                <label>Demo URL (optional)</label>
+                <input type="url" id="idea-demo" placeholder="https://your-demo.com">
+            </div>
+            <button type="submit" class="btn btn-primary" style="padding:12px 30px; font-size:15px;">🚀 Submit for AI Evaluation</button>
+        </form>
+    </div>
+</div>
+<div class="footer">&copy; 2026 HackHub | IWT Lab Project</div>
+<script src="script.js"></script>
+</body>
+</html>

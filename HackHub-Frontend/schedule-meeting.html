@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HackHub - Schedule Meeting</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="navbar">
+    <a href="index.html" class="logo">🚀 HackHub</a>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="hackathons.html">Hackathons</a>
+        <a href="find-teammates.html">Teams</a>
+        <a href="inbox.html">Messages</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+<div class="container" style="max-width:650px;">
+    <a href="team-dashboard.html" style="color:#3498db; text-decoration:none;">← Back to Team</a>
+    <h2 class="page-title mt10">📅 Schedule Meeting</h2>
+
+    <div class="card">
+        <form onsubmit="handleScheduleMeeting(event)">
+            <div class="form-group">
+                <label>Meeting Title *</label>
+                <input type="text" id="meet-title" placeholder="e.g. Sprint Planning">
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="meet-desc" placeholder="What will be discussed in this meeting?"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Date *</label>
+                <input type="date" id="meet-date">
+            </div>
+            <div class="form-group">
+                <label>Time *</label>
+                <input type="time" id="meet-time">
+            </div>
+            <div class="form-group">
+                <label>Duration (minutes)</label>
+                <select id="meet-duration">
+                    <option>15</option>
+                    <option selected>30</option>
+                    <option>45</option>
+                    <option>60</option>
+                    <option>90</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Meeting Link (Google Meet / Zoom)</label>
+                <input type="url" id="meet-link" placeholder="https://meet.google.com/abc-defg-hij">
+            </div>
+            <div class="form-group">
+                <label>Location (if in-person)</label>
+                <input type="text" id="meet-location" placeholder="e.g. Room 204, CS Building">
+            </div>
+            <button type="submit" class="btn btn-primary" style="padding:12px 30px;">📅 Schedule Meeting</button>
+        </form>
+    </div>
+
+    <h3 style="margin:20px 0 10px;">📋 Upcoming Meetings</h3>
+    <div class="card">
+        <table>
+            <thead>
+                <tr><th>Title</th><th>Date</th><th>Time</th><th>Link</th></tr>
+            </thead>
+            <tbody id="meetings-list">
+                <tr><td colspan="4" style="text-align:center; color:#888;">Loading meetings...</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="footer">&copy; 2026 HackHub | IWT Lab Project</div>
+<script src="script.js"></script>
+</body>
+</html>

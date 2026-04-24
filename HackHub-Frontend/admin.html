@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HackHub - Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="navbar">
+    <a href="index.html" class="logo">🚀 HackHub</a>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="hackathons.html">Hackathons</a>
+        <a href="admin.html">Admin</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+<div class="container">
+    <h2 class="page-title">⚙️ Admin Dashboard</h2>
+
+    <div class="stats-row">
+        <div class="stat-box"><div class="number" id="admin-users">--</div><div class="label">Total Users</div></div>
+        <div class="stat-box"><div class="number" id="admin-hackathons">--</div><div class="label">Hackathons</div></div>
+        <div class="stat-box"><div class="number" id="admin-teams">--</div><div class="label">Teams</div></div>
+        <div class="stat-box"><div class="number" id="admin-submissions">--</div><div class="label">Submissions</div></div>
+        <div class="stat-box"><div class="number" id="admin-avg-score">--</div><div class="label">Avg AI Score</div></div>
+    </div>
+
+    <div class="card">
+        <h3>👥 User Management</h3>
+        <table>
+            <tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Action</th></tr>
+            <tr>
+                <td>Sumit Mund</td><td>sumit@email.com</td><td><span class="badge badge-blue">Student</span></td>
+                <td><span class="status status-open">Active</span></td>
+                <td><button class="btn btn-danger" onclick="alert('User deactivated!')">Deactivate</button></td>
+            </tr>
+            <tr>
+                <td>Ankit Patel</td><td>ankit@email.com</td><td><span class="badge badge-blue">Student</span></td>
+                <td><span class="status status-open">Active</span></td>
+                <td><button class="btn btn-danger" onclick="alert('User deactivated!')">Deactivate</button></td>
+            </tr>
+            <tr>
+                <td>Prof. Rajesh</td><td>rajesh@email.com</td><td><span class="badge badge-orange">Organizer</span></td>
+                <td><span class="status status-open">Active</span></td>
+                <td><button class="btn btn-danger" onclick="alert('User deactivated!')">Deactivate</button></td>
+            </tr>
+            <tr>
+                <td>Priya Singh</td><td>priya@email.com</td><td><span class="badge badge-blue">Student</span></td>
+                <td><span class="status status-closed">Inactive</span></td>
+                <td><button class="btn btn-success" onclick="alert('User activated!')">Activate</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3>🎯 Manage Hackathons</h3>
+        <table>
+            <tr><th>Hackathon</th><th>Organizer</th><th>Status</th><th>Participants</th><th>Action</th></tr>
+            <tr>
+                <td>FinTech Challenge 2026</td><td>Prof. Rajesh</td>
+                <td><span class="status status-open">Open</span></td><td>134</td>
+                <td><button class="btn btn-primary" onclick="alert('Editing...')">Edit</button> <button class="btn btn-danger" onclick="alert('Closed!')">Close</button></td>
+            </tr>
+            <tr>
+                <td>AI/ML Hackathon</td><td>Prof. Meena</td>
+                <td><span class="status status-open">Open</span></td><td>89</td>
+                <td><button class="btn btn-primary" onclick="alert('Editing...')">Edit</button> <button class="btn btn-danger" onclick="alert('Closed!')">Close</button></td>
+            </tr>
+            <tr>
+                <td>HealthCare Innovation</td><td>Prof. Rajesh</td>
+                <td><span class="status status-closed">Completed</span></td><td>200</td>
+                <td><button class="btn btn-primary" onclick="alert('Viewing...')">View</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3>📝 Submission Review Queue</h3>
+        <table>
+            <tr><th>Title</th><th>Team</th><th>Hackathon</th><th>AI Score</th><th>Status</th><th>Action</th></tr>
+            <tr>
+                <td>Smart Budget Tracker</td><td>CodeCrafters</td><td>FinTech</td><td>7.8</td>
+                <td><span class="status status-open">Shortlisted</span></td>
+                <td><a href="results.html?id=1" class="btn btn-primary">Review</a></td>
+            </tr>
+            <tr>
+                <td>Crypto Portfolio Manager</td><td>BlockChain Boys</td><td>FinTech</td><td>6.5</td>
+                <td><span class="status status-progress">Under Review</span></td>
+                <td><a href="results.html?id=2" class="btn btn-primary">Review</a></td>
+            </tr>
+            <tr>
+                <td>Student Loan Calculator</td><td>FinWiz</td><td>FinTech</td><td>5.2</td>
+                <td><span class="status status-closed">Rejected</span></td>
+                <td><a href="results.html?id=3" class="btn btn-primary">Review</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3>🤖 AI Analytics</h3>
+        <table>
+            <tr><th>Metric</th><th>Value</th></tr>
+            <tr><td>Total Evaluations</td><td>210</td></tr>
+            <tr><td>Average Score</td><td>6.8 / 10</td></tr>
+            <tr><td>Shortlisted Rate</td><td>42%</td></tr>
+            <tr><td>Rejection Rate</td><td>28%</td></tr>
+            <tr><td>Avg Innovation Score</td><td>7.1</td></tr>
+            <tr><td>Avg Feasibility Score</td><td>6.2</td></tr>
+            <tr><td>Avg Relevance Score</td><td>7.5</td></tr>
+            <tr><td>Avg Clarity Score</td><td>6.4</td></tr>
+        </table>
+    </div>
+</div>
+<div class="footer">&copy; 2026 HackHub | IWT Lab Project</div>
+<script src="script.js"></script>
+</body>
+</html>

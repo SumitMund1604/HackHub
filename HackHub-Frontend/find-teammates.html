@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HackHub - Find Teammates</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="navbar">
+    <a href="index.html" class="logo">🚀 HackHub</a>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="hackathons.html">Hackathons</a>
+        <a href="find-teammates.html">Teams</a>
+        <a href="inbox.html">Messages</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+<div class="container">
+    <h2 class="page-title">🔍 Find Teammates</h2>
+    <p style="color:#888; margin-bottom:15px;">AI-recommended teammates for <strong>FinTech Challenge 2026</strong></p>
+
+    <div style="margin-bottom:20px;">
+        <input type="text" id="searchBox" placeholder="🔍 Search by name or skill..." style="padding:10px; width:100%; border:1px solid #ccc; border-radius:4px; font-size:14px;" onkeyup="filterTable('searchBox','teamTable')">
+    </div>
+
+    <h3 style="margin-bottom:10px;">🤖 AI Recommendations</h3>
+    <div class="grid">
+        <div class="card text-center">
+            <div class="avatar" style="margin:0 auto 8px; width:60px; height:60px; font-size:24px;">A</div>
+            <strong>Ankit Patel</strong>
+            <p style="color:#27ae60; font-weight:bold;">92% Match</p>
+            <p>CSE · 3rd Year</p>
+            <p><span class="badge badge-blue">Python</span> <span class="badge badge-green">Django</span> <span class="badge badge-purple">ML</span></p>
+            <p style="font-size:12px; color:#888; margin-top:5px;">Complementary: You need Python backend, they have it</p>
+            <br>
+            <a href="conversation.html" class="btn btn-primary">💬 Message</a>
+            <a href="#" class="btn btn-success" onclick="alert('Invite sent!')">👥 Invite</a>
+        </div>
+        <div class="card text-center">
+            <div class="avatar" style="margin:0 auto 8px; width:60px; height:60px; font-size:24px; background:#27ae60;">P</div>
+            <strong>Priya Singh</strong>
+            <p style="color:#27ae60; font-weight:bold;">87% Match</p>
+            <p>IT · 2nd Year</p>
+            <p><span class="badge badge-purple">TensorFlow</span> <span class="badge badge-orange">Data Science</span></p>
+            <p style="font-size:12px; color:#888; margin-top:5px;">Strong AI/ML skills for your FinTech project</p>
+            <br>
+            <a href="conversation.html" class="btn btn-primary">💬 Message</a>
+            <a href="#" class="btn btn-success" onclick="alert('Invite sent!')">👥 Invite</a>
+        </div>
+        <div class="card text-center">
+            <div class="avatar" style="margin:0 auto 8px; width:60px; height:60px; font-size:24px; background:#e67e22;">R</div>
+            <strong>Rohan Kumar</strong>
+            <p style="color:#3498db; font-weight:bold;">84% Match</p>
+            <p>CSE · 4th Year</p>
+            <p><span class="badge badge-red">DevOps</span> <span class="badge badge-blue">Docker</span> <span class="badge badge-green">AWS</span></p>
+            <p style="font-size:12px; color:#888; margin-top:5px;">Deployment expertise your team lacks</p>
+            <br>
+            <a href="conversation.html" class="btn btn-primary">💬 Message</a>
+            <a href="#" class="btn btn-success" onclick="alert('Invite sent!')">👥 Invite</a>
+        </div>
+    </div>
+
+    <h3 style="margin:20px 0 10px;">📋 Open Teams Looking for Members</h3>
+    <table id="teamTable">
+        <tr><th>Team</th><th>Hackathon</th><th>Members</th><th>Looking For</th><th>Action</th></tr>
+        <tr>
+            <td><strong>CodeCrafters</strong></td>
+            <td>FinTech Challenge</td>
+            <td>3/4</td>
+            <td>Backend Developer (Python)</td>
+            <td><a href="#" class="btn btn-success" onclick="alert('Join request sent!')">Request Join</a></td>
+        </tr>
+        <tr>
+            <td><strong>DataMinds</strong></td>
+            <td>AI/ML Hackathon</td>
+            <td>2/4</td>
+            <td>ML Engineer, Frontend Dev</td>
+            <td><a href="#" class="btn btn-success" onclick="alert('Join request sent!')">Request Join</a></td>
+        </tr>
+        <tr>
+            <td><strong>WebWizards</strong></td>
+            <td>Web Dev Sprint</td>
+            <td>1/3</td>
+            <td>Full Stack Developer</td>
+            <td><a href="#" class="btn btn-success" onclick="alert('Join request sent!')">Request Join</a></td>
+        </tr>
+    </table>
+</div>
+<div class="footer">&copy; 2026 HackHub | IWT Lab Project</div>
+<script src="script.js"></script>
+</body>
+</html>

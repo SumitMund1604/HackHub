@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HackHub - Conversation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="navbar">
+    <a href="index.html" class="logo">🚀 HackHub</a>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="inbox.html">Messages</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+<div class="container" style="max-width:700px;">
+    <a href="inbox.html" style="color:#3498db; text-decoration:none;">← Back to Inbox</a>
+    <h2 class="page-title mt10">💬 Ankit Patel</h2>
+
+    <div class="chat-box">
+        <div class="bubble recv">
+            Hey! I saw your team CodeCrafters is looking for a Python developer.
+            <div class="meta">Ankit · 10:30 AM</div>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="bubble sent">
+            Hi Ankit! Yes, we need someone with Python and Django experience for the backend.
+            <div class="meta">You · 10:32 AM</div>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="bubble recv">
+            I have 2 years of experience with Python and Django. I've also worked with Flask and PostgreSQL.
+            <div class="meta">Ankit · 10:33 AM</div>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="bubble sent">
+            That's great! Our project is a Smart Budget Tracker for students. Would you like to see the repo?
+            <div class="meta">You · 10:35 AM</div>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="bubble recv">
+            Yes please! I'd love to join. I can start this weekend.
+            <div class="meta">Ankit · 10:36 AM</div>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="bubble sent">
+            Awesome! I'll send you the invite. Welcome aboard! 🎉
+            <div class="meta">You · 10:38 AM</div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+
+    <form onsubmit="handleSendMessage(event)" style="display:flex; gap:10px;">
+        <input type="text" id="msg-input" placeholder="Type a message..." style="flex:1; padding:10px; border:1px solid #ccc; border-radius:4px; font-size:14px;">
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+</div>
+<div class="footer">&copy; 2026 HackHub | IWT Lab Project</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HackHub - Leaderboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="navbar">
+    <a href="index.html" class="logo">🚀 HackHub</a>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="hackathons.html">Hackathons</a>
+        <a href="find-teammates.html">Teams</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="inbox.html">Messages</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+<div class="container">
+    <h2 class="page-title">🏆 Leaderboard</h2>
+    <div id="podium" class="grid mb20"></div>
+    <table>
+        <thead><tr><th>Rank</th><th>Name</th><th>College</th><th>Points</th><th>Hackathons</th></tr></thead>
+        <tbody id="leaderboard-body">
+            <tr><td colspan="5" style="text-align:center;color:#888;">Loading...</td></tr>
+        </tbody>
+    </table>
+    <div class="card mt20">
+        <h3>📊 Points System</h3>
+        <table>
+            <tr><th>Action</th><th>Points</th></tr>
+            <tr><td>Participate in hackathon</td><td>+10</td></tr>
+            <tr><td>Submit an idea</td><td>+15</td></tr>
+            <tr><td>Get shortlisted by AI</td><td>+25</td></tr>
+            <tr><td>Reach finals</td><td>+50</td></tr>
+            <tr><td>Win a hackathon</td><td>+100</td></tr>
+        </table>
+    </div>
+</div>
+<div class="footer">&copy; 2026 HackHub | IWT Lab Project</div>
+<script src="script.js"></script>
+</body>
+</html>
