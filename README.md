@@ -1,4 +1,4 @@
-# 🚀 HackHub — Hackathon Management System
+# HackHub — Hackathon Management System
 
 > A full-stack platform for organizing, managing, and participating in college hackathons — featuring AI-powered idea evaluation and smart teammate recommendations.
 
@@ -9,7 +9,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -36,14 +36,14 @@
 
 | Module | Description |
 |--------|-------------|
-| **🔐 Auth & Profiles** | Register, login, profile editing, skill management, GitHub/LinkedIn integration |
-| **🏆 Hackathon Management** | Create, browse, and register for hackathons with status lifecycle management |
-| **🤖 AI Pre-Assessment** | NLP-based idea evaluation scoring Innovation, Feasibility, Relevance, and Clarity |
-| **👥 Teams & Collaboration** | Create/join teams, browse open teams, AI-powered teammate recommendations |
-| **💬 Messaging** | Direct messages and team group chat with unread indicators |
-| **📅 Meetings** | Schedule team meetings with links, location, and RSVP tracking |
-| **📊 Leaderboard** | Global and per-hackathon rankings with a points-based reward system |
-| **🛡️ Admin Panel** | User management, hackathon CRUD, submission review queue, system analytics |
+| **Auth & Profiles** | Register, login, profile editing, skill management, GitHub/LinkedIn integration |
+| **Hackathon Management** | Create, browse, and register for hackathons with status lifecycle management |
+| **AI Pre-Assessment** | NLP-based idea evaluation scoring Innovation, Feasibility, Relevance, and Clarity |
+| **Teams & Collaboration** | Create/join teams, browse open teams, AI-powered teammate recommendations |
+| **Messaging** | Direct messages and team group chat with unread indicators |
+| **Meetings** | Schedule team meetings with links, location, and RSVP tracking |
+| **Leaderboard** | Global and per-hackathon rankings with a points-based reward system |
+| **Admin Panel** | User management, hackathon CRUD, submission review queue, system analytics |
 
 ---
 
@@ -148,7 +148,7 @@ HackHub/
 │   ├── generate-hash.js       # BCrypt hash utility
 │   ├── test-db.js             # DB connection test script
 │   ├── package.json           # Node dependencies
-│   ├── .env                   # 🔒 DB credentials (gitignored)
+│   ├── .env                   # DB credentials (gitignored)
 │   └── .gitignore             # Ignores .env, node_modules
 │
 ├── NLP/                       # Python AI Microservice
@@ -364,7 +364,7 @@ DB_USER=postgres
 DB_PASSWORD=your_password_here
 ```
 
-> ⚠️ The `.env` file is gitignored. Never commit credentials.
+> **Warning:** The `.env` file is gitignored. Never commit credentials.
 
 ### 4. Install & Run the Backend
 
@@ -436,5 +436,5 @@ Then visit `http://localhost:8080`.
 ---
 
 <p align="center">
-  Built with ❤️ for college hackathons
+  Built for college hackathons
 </p>
